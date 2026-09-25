@@ -1,43 +1,131 @@
 # 💡 Review Ideas AI Agent
 
-**Review Ideas AI Agent** is an AI-powered workflow built with **n8n** that evaluates, analyzes, and provides structured feedback on **business ideas, project concepts, and new product ideas**.
+**Review Ideas AI Agent** is an AI-powered decision-support system built with **n8n** that analyzes business, startup, and project ideas and generates structured feedback to help users evaluate their ideas more systematically.
 
-The workflow uses Large Language Models (LLMs) to analyze submitted ideas, identify potential risks, and generate structured feedback to help users make more informed decisions.
+The system combines **LLMs, workflow automation, and tool-based AI agent capabilities** to analyze an idea from multiple perspectives and determine which analysis steps or tools are relevant to the submitted idea.
 
----
+## 🎯 Project Overview
 
-## 🌟 Key Features
+The main goal of the project is to automate the **initial evaluation stage of an idea**.
 
-* 🧠 **AI Idea Analysis**
+Instead of manually reviewing every idea from scratch, the AI Agent receives the idea, determines what information or analysis is needed, uses the available tools when necessary, and produces a structured evaluation.
 
-  * Analyze submitted business and project ideas.
-  * Evaluate potential strengths and weaknesses.
-  * Identify possible risks and challenges.
+```text
+User Idea
+    ↓
+AI Agent
+    ↓
+Understand the Idea
+    ↓
+Determine Required Analysis
+    ↓
+Use Available Tools When Needed
+    ↓
+Analyze the Results
+    ↓
+Generate Structured Feedback
+```
 
-* 📊 **Business Idea Evaluation**
+The agent does not necessarily use every available tool for every idea. It can determine whether a specific tool is relevant before using it.
 
-  * Review the potential of a business concept.
-  * Provide structured AI-assisted feedback.
-  * Help identify areas that may require further research.
+## 🤖 AI Agent Capabilities
 
-* 📋 **Structured Output**
+### 🧠 Idea Understanding
 
-  * Organizes AI feedback into clear sections.
-  * Makes complex analysis easier to understand and review.
+The agent analyzes the submitted idea to understand:
 
-* ⚙️ **Automated AI Workflow**
+* What the idea is
+* What problem it attempts to solve
+* Who the potential users are
+* What type of project or business it represents
 
-  * Processes submissions automatically through n8n workflow nodes.
-  * Reduces repetitive manual analysis.
+### 🔎 Structured Idea Analysis
 
-* 🤖 **LLM Integration**
+The agent can evaluate different aspects of an idea depending on the information available and the analysis required.
 
-  * Supports local or remote Large Language Models.
-  * Connects AI models to the automated evaluation workflow.
+Examples include:
 
----
+* Problem and solution analysis
+* Target audience considerations
+* Potential strengths and weaknesses
+* Risks and challenges
+* Business considerations
+* Areas that require additional research
 
-## 🛠️ Tech Stack
+### 🛠️ Tool-Based Analysis
+
+The workflow can provide the AI Agent with external tools that it can use when required.
+
+Rather than following a completely fixed sequence, the agent can determine whether a tool is relevant to the current idea and use it accordingly.
+
+```text
+                  ┌───────────────┐
+                  │   User Idea   │
+                  └───────┬───────┘
+                          ↓
+                  ┌───────────────┐
+                  │   AI Agent    │
+                  └───────┬───────┘
+                          ↓
+                ┌───────────────────┐
+                │ Need a tool?      │
+                └───────┬───────────┘
+                    Yes │ No
+                        │
+             ┌──────────▼──────────┐
+             │   Use Tool          │
+             │   & Analyze Result  │
+             └──────────┬──────────┘
+                        │
+                        ▼
+                ┌───────────────┐
+                │ Final Review  │
+                └───────────────┘
+```
+
+This makes the workflow more flexible than a traditional automation where every input follows exactly the same path.
+
+## ⚙️ Workflow Automation
+
+The complete workflow is implemented using **n8n**, connecting the AI Agent with the required processing steps and tools.
+
+n8n handles:
+
+* Workflow orchestration
+* AI Agent execution
+* Tool integration
+* Data flow between workflow nodes
+* Automated processing
+
+## 🧩 System Architecture
+
+```text
+┌─────────────────────────┐
+│       User Idea         │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│      n8n Workflow       │
+│                         │
+│     AI Agent            │
+└────────────┬────────────┘
+             │
+      ┌──────┴──────┐
+      │             │
+      ▼             ▼
+   AI/LLM        Tools
+      │             │
+      └──────┬──────┘
+             │
+             ▼
+┌─────────────────────────┐
+│ Structured Evaluation  │
+│ & Decision Support     │
+└─────────────────────────┘
+```
+
+## 🛠️ Technology Stack
 
 ### Workflow Automation
 
@@ -45,91 +133,72 @@ The workflow uses Large Language Models (LLMs) to analyze submitted ideas, ident
 
 ### Artificial Intelligence
 
+* **AI Agents**
 * **Large Language Models (LLMs)**
-* **Local LLM Integration**
-* **Remote LLM Integration**
+* **Tool Calling**
+* **Prompt Engineering**
 
----
+### Integration
+
+* AI model integrations
+* n8n workflow nodes
+* External tools when required by the agent
 
 ## 🔄 How It Works
 
-```text id="xq1m9k"
-Project / Business Idea
-          ↓
-       n8n Trigger
-          ↓
-      AI Analysis
-          ↓
-   Idea Evaluation
-          ↓
- Risk & Opportunity Analysis
-          ↓
-   Structured Feedback
-```
+1. The user submits a business, startup, or project idea.
+2. The AI Agent interprets the submitted idea.
+3. The agent determines what type of analysis is relevant.
+4. When necessary, the agent uses the available tools.
+5. The returned information is processed by the agent.
+6. The system generates structured feedback.
+7. The final output is presented as decision-support information.
 
----
+## 💡 What This Project Demonstrates
 
-## 🚀 How to Set Up
+This project demonstrates practical experience with:
 
-### 1. Open n8n
+* **AI Agent Development**
+* **Workflow Automation**
+* **n8n**
+* **LLM Integration**
+* **Tool Calling**
+* **Prompt Engineering**
+* **Conditional AI workflows**
+* **Decision-support systems**
+* **Automating analytical workflows**
 
-Open your local or cloud **n8n** instance.
+More importantly, the project demonstrates the difference between a **fixed automation workflow** and an **AI Agent that can determine which actions or tools are relevant to a given task**.
 
-### 2. Import the Workflow
+## 🎯 Project Purpose
 
-Select **Import from File** and upload the provided workflow JSON file.
+The purpose of this project is not to replace human business analysis or market research.
 
-### 3. Configure LLM Credentials
+Instead, it acts as an **initial decision-support layer** that can help organize an idea, identify potential concerns, and determine areas that may require deeper investigation.
 
-Add the required credentials for your local or remote LLM provider.
-
-### 4. Test the Workflow
-
-Trigger the workflow and submit a project or business idea to test the AI evaluation process.
-
----
-
-## 🎯 Project Goal
-
-The goal of this project is to demonstrate how **AI agents and workflow automation** can be used to evaluate ideas and provide structured decision-support feedback.
-
-Instead of manually reviewing every idea, the workflow automates the initial analysis and organizes the results into a format that is easier to review and act upon.
-
-> AI-generated evaluations should be treated as decision-support information, not as a substitute for market research or professional business analysis.
-
----
+> AI-generated analysis should be treated as decision-support information and should be validated through real market research and human judgment.
 
 ## 🔮 Future Improvements
 
-Possible future improvements include:
-
-* [ ] Add idea scoring
-* [ ] Add market analysis
+* [ ] Add persistent storage for evaluated ideas
+* [ ] Add historical idea comparison
+* [ ] Add more specialized analysis tools
+* [ ] Add market research capabilities
 * [ ] Add competitor analysis
 * [ ] Add target audience analysis
-* [ ] Add market-fit evaluation
-* [ ] Add cost and revenue analysis
-* [ ] Add risk scoring
-* [ ] Add multiple AI models for comparison
-* [ ] Store evaluated ideas in a database
-* [ ] Add a web interface for submitting ideas
+* [ ] Add financial feasibility analysis
+* [ ] Add web interface for submitting ideas
+* [ ] Add evaluation reports and export options
+* [ ] Improve agent evaluation and validation
+
+## 👨‍💻 Author
+
+**Moath Hazeem**
+
+MIS Student | Full-Stack Developer | AI Automation
+
+[GitHub](https://github.com/Moathhazeem)
 
 ---
 
-## 🤝 Contributing
-
-Contributions, suggestions, and improvements are welcome.
-
-Feel free to open an issue or submit a pull request.
-
----
-
-## ⭐ Support
-
-If you find this project useful or interesting, consider giving it a ⭐ on GitHub.
-
----
-
-## 🔎 Keywords
-
-`AI Agent` · `AI Idea Evaluator` · `AI Idea Analysis` · `Business Idea Analysis` · `Business Idea Evaluator` · `Project Idea Evaluation` · `AI Business Analysis` · `n8n AI Agent` · `n8n` · `n8n Workflow` · `AI Automation` · `Workflow Automation` · `LLM` · `LLM Agent` · `AI Workflow` · `Business Automation` · `Decision Support` · `Idea Validation` · `Startup Ideas` · `Business Automation`
+⭐ This project is part of my portfolio exploring **AI Agents, workflow automation, and AI-assisted decision-support systems**.
