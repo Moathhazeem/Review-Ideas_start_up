@@ -1,6 +1,6 @@
-# 💡 Review Ideas Start Up AI Agent
+# 💡 Review Ideas Startup AI Agent
 
-**Review Ideas Start Up AI Agent** is an AI-powered decision-support system built with **n8n** that analyzes business, startup, and project ideas and generates structured feedback to help users evaluate their ideas more systematically.
+**Review Ideas Startup AI Agent** is an AI-powered decision-support system built with **n8n** that analyzes business, startup, and project ideas and generates structured feedback to help users evaluate their ideas more systematically.
 
 The system combines **LLMs, workflow automation, and tool-based AI agent capabilities** to analyze an idea from multiple perspectives and determine which analysis steps or tools are relevant to the submitted idea.
 
@@ -54,7 +54,7 @@ Examples include:
 
 ### 🛠️ Tool-Based Analysis
 
-The workflow can provide the AI Agent with external tools that it can use when required.
+The workflow provides the AI Agent with external tools that it can use when required.
 
 Rather than following a completely fixed sequence, the agent can determine whether a tool is relevant to the current idea and use it accordingly.
 
@@ -77,10 +77,11 @@ Rather than following a completely fixed sequence, the agent can determine wheth
              │   & Analyze Result  │
              └──────────┬──────────┘
                         │
-                        ▼
-                ┌───────────────┐
-                │ Final Review  │
-                └───────────────┘
+                        └──────────────┐
+                                       ↓
+                              ┌────────────────┐
+                              │ Final Review   │
+                              └────────────────┘
 ```
 
 This makes the workflow more flexible than a traditional automation where every input follows exactly the same path.
@@ -108,20 +109,20 @@ n8n handles:
 ┌─────────────────────────┐
 │      n8n Workflow       │
 │                         │
-│     AI Agent            │
+│       AI Agent          │
 └────────────┬────────────┘
              │
       ┌──────┴──────┐
       │             │
       ▼             ▼
-   AI/LLM        Tools
+   AI / LLM       Tools
       │             │
       └──────┬──────┘
              │
              ▼
 ┌─────────────────────────┐
 │ Structured Evaluation  │
-│ & Decision Support     │
+│    & Decision Support   │
 └─────────────────────────┘
 ```
 
@@ -137,12 +138,6 @@ n8n handles:
 * **Large Language Models (LLMs)**
 * **Tool Calling**
 * **Prompt Engineering**
-
-### Integration
-
-* AI model integrations
-* n8n workflow nodes
-* External tools when required by the agent
 
 ## 🔄 How It Works
 
@@ -164,9 +159,9 @@ This project demonstrates practical experience with:
 * **LLM Integration**
 * **Tool Calling**
 * **Prompt Engineering**
-* **Conditional AI workflows**
-* **Decision-support systems**
-* **Automating analytical workflows**
+* **Conditional AI Workflows**
+* **Decision-Support Systems**
+* **Automating Analytical Workflows**
 
 More importantly, the project demonstrates the difference between a **fixed automation workflow** and an **AI Agent that can determine which actions or tools are relevant to a given task**.
 
