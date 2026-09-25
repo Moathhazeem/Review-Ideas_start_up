@@ -1,6 +1,6 @@
-# 💡 Review Ideas start up AI Agent
+# 💡 Review Ideas Start Up AI Agent
 
-**Review Ideas start up AI Agent** is an AI-powered decision-support system built with **n8n** that analyzes business, startup, and project ideas and generates structured feedback to help users evaluate their ideas more systematically.
+**Review Ideas Start Up AI Agent** is an AI-powered decision-support system built with **n8n** that analyzes business, startup, and project ideas and generates structured feedback to help users evaluate their ideas more systematically.
 
 The system combines **LLMs, workflow automation, and tool-based AI agent capabilities** to analyze an idea from multiple perspectives and determine which analysis steps or tools are relevant to the submitted idea.
 
